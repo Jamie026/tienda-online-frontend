@@ -1,0 +1,256 @@
+.facturas__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.facturas__titulo {
+    margin: 0 0 0.375rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.facturas__subtitulo {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+}
+
+.facturas__exito {
+    margin-bottom: 1.5rem;
+    padding: 0.875rem 1rem;
+    background: var(--accent-green-dim);
+    border: 1px solid rgba(0, 230, 118, 0.3);
+    border-radius: var(--radius-sm);
+    color: var(--success);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.facturas__error {
+    margin-bottom: 1.5rem;
+    padding: 0.875rem 1rem;
+    background: var(--error-dim);
+    border: 1px solid rgba(255, 82, 82, 0.3);
+    border-radius: var(--radius-sm);
+    color: var(--error);
+    font-size: 0.875rem;
+}
+
+.facturas__vacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 28rem;
+    margin: 2rem auto 0;
+}
+
+.facturas__vacio-icono {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.facturas__vacio h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.facturas__vacio p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.facturas-tabla__envoltura {
+    overflow-x: auto;
+}
+
+.facturas-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.facturas-tabla th {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.facturas-tabla td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.facturas-tabla tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.facturas-tabla__fila {
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.facturas-tabla__fila:hover,
+.facturas-tabla__fila:focus-visible {
+    background: var(--bg-hover);
+    outline: none;
+}
+
+.facturas-tabla__id {
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.facturas-tabla__total {
+    font-weight: 600;
+    color: var(--accent-cyan);
+    white-space: nowrap;
+}
+
+.factura-estado {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: var(--bg-elevated);
+}
+
+.factura-estado--recibida {
+    color: var(--success);
+    background: var(--accent-green-dim);
+    border-color: rgba(0, 230, 118, 0.3);
+}
+
+.factura-estado--despachada {
+    color: var(--accent-cyan);
+    background: var(--accent-cyan-dim);
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+.factura-estado--anulada,
+.factura-estado--anulado {
+    color: var(--error);
+    background: var(--error-dim);
+    border-color: rgba(255, 82, 82, 0.3);
+}
+
+.factura-estado--enviando {
+    color: var(--accent-cyan);
+    background: var(--accent-cyan-dim);
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+.factura-estado--entregado {
+    color: var(--success);
+    background: var(--accent-green-dim);
+    border-color: rgba(0, 230, 118, 0.3);
+}
+
+.facturas-tabla__acciones {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.factura-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.factura-form__texto {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.factura-form__texto strong {
+    color: var(--text-primary);
+}
+
+.factura-form__acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.factura-detalle {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.factura-detalle__carga {
+    min-height: 12rem;
+}
+
+.factura-detalle__datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1rem;
+    margin: 0;
+}
+
+.factura-detalle__datos dt {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.factura-detalle__datos dd {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--text-primary);
+}
+
+.factura-detalle__email {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.factura-detalle__tabla {
+    border-top: 1px solid var(--border);
+}
+
+.factura-detalle__total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+}
+
+.factura-detalle__total strong {
+    font-size: 1.375rem;
+    color: var(--accent-cyan);
+}

@@ -1,0 +1,139 @@
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background:
+        radial-gradient(
+            ellipse 80% 60% at 50% -10%,
+            rgba(0, 229, 255, 0.08),
+            transparent
+        ),
+        var(--bg-base);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 26rem;
+    padding: 2rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.auth-card__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-card__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.auth-card__logo-icon {
+    color: var(--accent-cyan);
+}
+
+.auth-card__subtitle {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.auth-form__error {
+    padding: 0.75rem 1rem;
+    background: var(--error-dim);
+    border: 1px solid rgba(255, 82, 82, 0.3);
+    border-radius: var(--radius-sm);
+    color: var(--error);
+    font-size: 0.875rem;
+}
+
+.auth-form__footer {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.auth-form__footer a {
+    font-weight: 600;
+}
+
+.role-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.role-selector__label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.role-selector__options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.role-chip {
+    padding: 0.625rem 0.5rem;
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        border-color var(--transition),
+        background-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
+}
+
+.role-chip:hover {
+    border-color: var(--text-disabled);
+    color: var(--text-primary);
+}
+
+.role-chip--active.role-chip--comprador {
+    border-color: var(--accent-cyan);
+    background: var(--accent-cyan-dim);
+    color: var(--accent-cyan);
+    box-shadow: var(--shadow-glow);
+}
+
+.role-chip--active.role-chip--vendedor {
+    border-color: var(--accent-magenta);
+    background: var(--accent-magenta-dim);
+    color: var(--accent-magenta);
+}
+
+.role-chip--active.role-chip--proveedor {
+    border-color: var(--accent-green);
+    background: var(--accent-green-dim);
+    color: var(--accent-green);
+}
+
+@media (max-width: 480px) {
+    .role-selector__options {
+        grid-template-columns: 1fr;
+    }
+}

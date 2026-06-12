@@ -1,0 +1,30 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.badge--cyan {
+    background: var(--accent-cyan-dim);
+    color: var(--accent-cyan);
+}
+
+.badge--magenta {
+    background: var(--accent-magenta-dim);
+    color: var(--accent-magenta);
+}
+
+.badge--green {
+    background: var(--accent-green-dim);
+    color: var(--accent-green);
+}
+
+.badge--default {
+    background: var(--bg-elevated);
+    color: var(--text-muted);
+}
